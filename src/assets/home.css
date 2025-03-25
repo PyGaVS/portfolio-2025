@@ -1,0 +1,63 @@
+.name-section {
+  display: flex;
+  flex-wrap:wrap;
+  font-size: 1rem;
+  justify-content: center;
+  margin: 0% 1% 1% 1%;
+  align-items: center;
+  padding-right: 5px;  
+  gap: 20px;
+  /*line-height: 1;*/
+  color: white;
+  animation: name 10s infinite;
+}
+
+@media (min-width: 640px) {
+  .name-section
+  {
+    padding: 5px 30px 5px 30px;
+    
+    font-size: 1rem;
+  }}
+
+  /*
+div.head {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  line-height: 1;
+  color: white;
+  border: solid white;
+  animation: name 10s infinite;
+}
+  */
+
+.pp {
+  border-radius: 30px;
+  transition: 400ms;
+  width: 65px;
+  height: 65px;
+}
+
+.pp:hover {
+  cursor: zoom-in;
+  width: 80px;
+  height: 80px;
+}
+
+@keyframes name {
+  from, to { color: hsl(324, 70%, 75%); }
+  10%      { color: hsl(360, 65%, 75%); }
+  20%      { color: hsl( 36, 80%, 75%); }
+  30%      { color: hsl( 72, 75%, 65%); }
+  40%      { color: hsl(108, 65%, 65%); }
+  50%      { color: hsl(144, 75%, 65%); }
+  60%      { color: hsl(180, 75%, 65%); }
+  70%      { color: hsl(216, 60%, 75%); }
+  80%      { color: hsl(252, 65%, 80%); }
+  90%      { color: hsl(288, 60%, 70%); }
+}
+
+footer {
+  margin-top: 80px;
+}
