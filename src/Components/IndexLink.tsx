@@ -6,7 +6,7 @@ interface Props {
   route: string;
 }
 
-export default function(props: PropsWithChildren<Props>){
+export default function IndexLink(props: PropsWithChildren<Props>){
   return (
     <NavLink className="tab" to={props.route}>
       <div className="link">{props.children}</div>

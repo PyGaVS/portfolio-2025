@@ -11,7 +11,6 @@ function Exp() {
       <div className ="paragraph">
           <h2><strong>2018-2019</strong></h2>
           <p className="gray">3eme au collège Pierre de Coubertin à Legé</p>
-          <br />
           <h2><strong>2019-2022</strong></h2>
           <p className="gray">Bac général Lycée Notre Dame du Roc à la Roche sur Yon (mention bien)</p>
           <strong>Spécialités :</strong>
