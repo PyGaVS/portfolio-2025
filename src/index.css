@@ -1,27 +1,7 @@
-html {
-  background-image : url('./assets/img/void.jpg');
-  background-attachment: fixed;
-  scroll-behavior: smooth;
-}
-
-body {
-  color : white;
-  font-family:'Arial Narrow Bold', sans-serif;
-  font-size: 1rem;
-  overflow-x: hidden;
-}
-
-:root {
-  --green: rgb(43, 179, 89);
-  --light-green: rgb(63, 199, 109);
-  --bright-green: rgb(122, 248, 164);
-  --gray-3-green: rgb(52, 56, 53);
-  --gray-0: rgb(206, 206, 206);
-  --gray-1: rgb(150, 150, 150);
-  --gray-2: rgb(106, 106, 106);
-  --gray-3: rgb(50, 50, 50);
-  --gray-4: rgb(30, 30, 30);
-}
+@import './assets/css/base.css';
+@import './assets/css/components.css';
+@import './assets/css/layout.css';
+@import './assets/css/utils.css';
 
 /*SCROLLBAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 body::-webkit-scrollbar {
@@ -118,19 +98,6 @@ pre.code::-webkit-scrollbar-thumb {
   font-size:104%;
 }
 
-.row-center
-{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-
 .align-result{
   display:flex;
   flex-wrap: wrap;
@@ -140,54 +107,7 @@ pre.code::-webkit-scrollbar-thumb {
 
 
 
-.home-button-shadow {
-  background-color: black;
-  clip-path: polygon(0% 0%, 100% 0%, 72% 100%, 0% 100%);
-  background: linear-gradient(107deg, 
-  black 67%,
-  transparent 76%);
-  width: 100px;
-}
 
-.home-button > p {
-  transition: 0.3s;
-}
-
-.home-button:hover p {
-  transform: translateX(-20%);
-}
-
-.home-button
-{
-  text-decoration:none;
-  background-color: var(--gray-2);
-  color: white;
-
-  width: 80px;
-  height: 80px;
-  padding-right: 10px;
-  clip-path: polygon(0% 0%, 100% 0%, 72% 100%, 0% 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-button:hover {
-  cursor: pointer;
-  background: var(--gray-1);
-}
-
-.go-up:hover {
-  background: var(--light-green);
-  cursor: pointer;
-
-}
-
-.home-button:active, .go-up:active {
-  background: black;
-  color: white;
-  -webkit-tap-highlight-color: transparent;
-}
 
 .paragraph {
   margin-left: 15px;
@@ -227,23 +147,6 @@ strong.title
 
 .white-link:hover, .blue-link:hover{
   text-decoration: underline;
-}
-
-.tab-head
-{
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  width: 101vw;
-  height: 80px;
-  margin-bottom: 15px;
-  position: relative;
-  left: -10px;
-  top: -10px;
-
-  background: radial-gradient(circle, var(--gray-3-green) 0%, var(--gray-3) 100%);
-  gap: 2vw;
-  box-shadow: 0px 0px 15px 1px;
 }
 
 .gray
@@ -299,17 +202,7 @@ div.contact {
   text-decoration: underline;
 }
 
-div.skill
-{   /*
-  margin: 50px;
-  margin-top: 5px;
-  border-left: solid white 4px;
-  width: 90%;
-  padding-bottom: 30px;
-  padding-top: 1px;
-  padding-left: 15px;
-  transition: 0.7s;
-  */
+div.skill {
   margin: 1rem;
   font-family: 'Courier New', Courier, monospace;
   border-radius: 1rem;
@@ -431,21 +324,6 @@ h2.skill
 @keyframes borderColor{
   from, to { border: 2px solid rgb(63, 199, 109, .10); }
   50% { border: 2px solid rgb(63, 199, 109, .90); }
-}
-
-.project-image {
-  border-radius: 4px;
-  border: solid rgb(63, 199, 109, .10);
-  animation: borderColor 5s infinite;
-  max-width: 100%;
-}
-
-.ytb-embed {
-  border-radius: 4px;
-  border: solid rgb(63, 199, 109, .10);
-  animation: borderColor 5s infinite;
-  max-width: 90%;
-  aspect-ratio: 16/9;
 }
 
 details {
@@ -623,3 +501,4 @@ div.black-band {
   padding: 1.5%;
   padding-left: 4vw;
 }
+

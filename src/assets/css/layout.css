@@ -1,0 +1,115 @@
+.name-section {
+  display: flex;
+  flex-wrap:wrap;
+  font-size: 1rem;
+  justify-content: center;
+  margin: 0% 1% 1% 1%;
+  align-items: center;
+  padding-right: 5px;  
+  gap: 20px;
+  /*line-height: 1;*/
+  color: white;
+  animation: name 10s infinite;
+}
+
+@media (min-width: 640px) {
+  .name-section
+  {
+    padding: 5px 30px 5px 30px;
+    border: solid white;
+    font-size: 1rem;
+  }}
+
+.pp {
+  border-radius: 30px;
+  transition: 400ms;
+  width: 65px;
+  height: 65px;
+}
+
+.pp:hover {
+  cursor: zoom-in;
+  width: 80px;
+  height: 80px;
+}
+
+@keyframes name {
+  from, to { color: hsl(324, 70%, 75%); }
+  10%      { color: hsl(360, 65%, 75%); }
+  20%      { color: hsl( 36, 80%, 75%); }
+  30%      { color: hsl( 72, 75%, 65%); }
+  40%      { color: hsl(108, 65%, 65%); }
+  50%      { color: hsl(144, 75%, 65%); }
+  60%      { color: hsl(180, 75%, 65%); }
+  70%      { color: hsl(216, 60%, 75%); }
+  80%      { color: hsl(252, 65%, 80%); }
+  90%      { color: hsl(288, 60%, 70%); }
+}
+
+footer {
+  margin-top: 80px;
+}
+
+.tab-head {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 101vw;
+  height: 80px;
+  margin-bottom: 15px;
+  position: relative;
+  left: -10px;
+  top: -10px;
+
+  background: radial-gradient(circle, var(--gray-3-green) 0%, var(--gray-3) 100%);
+  gap: 2vw;
+  box-shadow: 0px 0px 15px 1px;
+}
+
+.home-button-shadow {
+  background-color: black;
+  clip-path: polygon(0% 0%, 100% 0%, 72% 100%, 0% 100%);
+  background: linear-gradient(107deg, 
+  black 67%,
+  transparent 76%);
+  width: 100px;
+}
+
+.home-button > p {
+  transition: 0.3s;
+}
+
+.home-button:hover p {
+  transform: translateX(-20%);
+}
+
+.home-button {
+  text-decoration:none;
+  background-color: var(--gray-2);
+  color: white;
+
+  width: 80px;
+  height: 80px;
+  padding-right: 10px;
+  clip-path: polygon(0% 0%, 100% 0%, 72% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-button:hover {
+  cursor: pointer;
+  background: var(--gray-1);
+}
+
+.go-up:hover {
+  background: var(--light-green);
+  cursor: pointer;
+
+}
+
+.home-button:active, .go-up:active {
+  background: black;
+  color: white;
+  -webkit-tap-highlight-color: transparent;
+}

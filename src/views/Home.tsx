@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import "../assets/home.css"
 import NameSection from '../Components/NameSection'
 import IndexLink from '../Components/IndexLink'
 import { NavLink } from 'react-router'
