@@ -126,7 +126,7 @@ function Projects() {
               </p>
           </Project>
           <Project title="Application de discussion : Dart Flutter"
-          images={[{source: selenium, width: 300}, {source: seleniumReport, width: 300}, {source: seleniumReport, width: 300}]}>
+          images={[{source: selenium, width: 300}, {source: seleniumSearch, width: 300}, {source: seleniumReport, width: 300}]}>
             <p className="gray">Ce projet constitue la situation professionnelle n°2 présenté lors de l'épreuve E5 du BTS SIO</p>
             <p className="gray"> Cet application mobile permet à des utilisateurs de communiquer entre eux, en accédant à 
               une conversation et en écrivant des messages.</p>
