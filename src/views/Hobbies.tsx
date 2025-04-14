@@ -1,6 +1,7 @@
 import Header from '../Components/Header';
 import esport from '../assets/img/hobbies/esport.jpg';
 import pullUp from '../assets/img/hobbies/pull_up.jpg';
+import code from '../assets/img/hobbies/code.jpg';
 import Hobbie from '../Components/Hobbie';
 
 function Hobbies() {
@@ -22,13 +23,17 @@ function Hobbies() {
         <p className='bubble orange-bg'>rigueur</p>
         <p className='bubble orange-bg'>discipline</p>
       </Hobbie>
-      <Hobbie img={pullUp} title='Programmation'>
+      <Hobbie img={code} title='Programmation'>
         <p className='bubble purple-bg'>apprentissage</p>
         <p className='bubble red-bg'>passion</p>
         <p className='bubble purple-bg'>veille technologique</p>
         <p className='bubble purple-bg'>algorithmie</p>
         <p className='bubble orange-bg'>autonomie</p>
       </Hobbie>
+      </div>
+      <div className ="paragraph">
+          <h2><strong>Mes centres d'intérêts secondaires</strong></h2>
+          <p className="gray">Manga, roller, jeux vidéos</p>
       </div>
     </>
   )

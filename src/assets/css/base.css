@@ -11,7 +11,7 @@ body {
   overflow-x: hidden;
 }
 
-img {
+img:not(.pp) {
   border-radius: 4px;
   border: solid rgb(63, 199, 109, .10);
   animation: borderColor 5s infinite;
@@ -49,10 +49,20 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
+}
+
+.paragraph {
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+.paragraph-with-code {
+  margin-left: 2rem;
 }

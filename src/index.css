@@ -105,19 +105,6 @@ pre.code::-webkit-scrollbar-thumb {
   gap: 1rem;
 }
 
-
-
-
-
-.paragraph {
-  margin-left: 15px;
-  margin-right: 5px;
-}
-
-.paragraph-with-code {
-  margin-left: 2rem;
-}
-
 @media (max-width: 640px) {
   .paragraph-with-code {
   margin-left: 1rem;
