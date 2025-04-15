@@ -1,12 +1,12 @@
 import React, { JSX, PropsWithChildren } from 'react';
-import {Code, Result, Text} from '../types/DocData';
+import {Code, Text} from '../types/DocData';
 
 interface Props {
   title: string;
   elements: (Text | Code)[];
 }
 
-export default function List(props: PropsWithChildren<Props>){
+export default function Doc(props: PropsWithChildren<Props>){
   const getCodeElement = (code: Code): JSX.Element => {
     return (
       <pre className='code'>
@@ -25,7 +25,7 @@ export default function List(props: PropsWithChildren<Props>){
         if(element.type === 'text'){
           html = (<p className='gray'>
             {element.content.map(text => (
-                typeof text === 'string' ? text : <a className="blue-link" href={text.url} target="_blank">{text.name}</a>
+                typeof text === 'string' ? text : <a className="blue-link" href={text.url} target="_blank">{text.name ?? text.url}</a>
               ))
             }
           </p>);
@@ -35,7 +35,7 @@ export default function List(props: PropsWithChildren<Props>){
               <div className='align-result'>
                 {getCodeElement(element)}
                 <div>
-                  <p>résultat : </p>
+                  <p>result : </p>
                   <div className={element.result.type}>
                     {!Array.isArray(element.result.content) ? element.result.content : element.result.content.map(line => <p>{line}</p>)}
                   </div>
@@ -47,7 +47,7 @@ export default function List(props: PropsWithChildren<Props>){
           }
         }
 
-        return (<></>)
+        return (html)
         })}
     </div>
   </>)

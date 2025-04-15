@@ -15,5 +15,5 @@ export interface Result {
 
 export interface Text {
   type: 'text';
-  content: (string | {name: string, url: string})[];
+  content: (string | {name?: string, url: string})[];
 }

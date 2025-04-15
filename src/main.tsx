@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+import 'prismjs/themes/prism-tomorrow.css';
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from './views/Home';
-import Documentation from './views/Documentation';
+import Documentation from './views/DocView/Documentation';
 import Exp from './views/Exp';
 import Skills from './views/Skills';
 import Hobbies from './views/Hobbies';

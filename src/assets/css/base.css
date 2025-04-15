@@ -66,3 +66,9 @@ img:not(.pp) {
 .paragraph-with-code {
   margin-left: 2rem;
 }
+
+@media (max-width: 640px) {
+  .paragraph-with-code {
+  margin-left: 1rem;
+  }
+}
