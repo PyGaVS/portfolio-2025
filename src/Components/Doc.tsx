@@ -1,5 +1,7 @@
-import React, { JSX, PropsWithChildren } from 'react';
-import {Code, Text} from '../types/DocData';
+import { JSX, PropsWithChildren } from 'react';
+import {Code, ConsoleResult, WebResult, Text} from '../types/DocData';
+import CodeBlock from './CodeBlock';
+import ResultBlock from './ResultBlock';
 
 interface Props {
   title: string;
@@ -7,15 +9,7 @@ interface Props {
 }
 
 export default function Doc(props: PropsWithChildren<Props>){
-  const getCodeElement = (code: Code): JSX.Element => {
-    return (
-      <pre className='code'>
-        <code className={'language-' + code.language}>
-          {code.content}
-        </code>
-      </pre>
-    )
-  }
+
   return (<>
     <strong id={props.title.split(' ').join('-')}>{props.title + ' :'}</strong>
     <div className="code">
@@ -31,19 +25,18 @@ export default function Doc(props: PropsWithChildren<Props>){
           </p>);
         } else if(element.type === 'code'){
           if(!!element.result){
+            const css: Code | undefined = (element.result.type == 'web' ? element.result.css : undefined)
             html = (
+              <>
+              {css ? <CodeBlock code={css} /> : null}
               <div className='align-result'>
-                {getCodeElement(element)}
-                <div>
-                  <p>result : </p>
-                  <div className={element.result.type}>
-                    {!Array.isArray(element.result.content) ? element.result.content : element.result.content.map(line => <p>{line}</p>)}
-                  </div>
-                </div>
+                <CodeBlock code={element} />
+                <ResultBlock code={element as Code & { result: ConsoleResult | WebResult}} />
               </div>
+              </>
             );
           } else {
-            html = getCodeElement(element);
+            html = (<CodeBlock code={element} />);
           }
         }
 

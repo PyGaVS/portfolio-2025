@@ -98,12 +98,7 @@ pre.code::-webkit-scrollbar-thumb {
   font-size:104%;
 }
 
-.align-result{
-  display:flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem;
-}
+
 
 strong.title
 {
@@ -340,112 +335,7 @@ div.hobbies > div > * {
   margin: 0.25rem;
 }
 
-pre.code {
-  background : var(--gray-3);
-  animation: borderColor 5s infinite;
 
-  margin-bottom: 0.3rem;
-  margin-top: 0.3rem;
-  margin-right: 0.5rem;
-  padding-bottom: 0.4rem;
-  border-radius: 5px;
-  overflow-x:scroll;
-  cursor:text;
-}
-
-@media (max-width: 640px) {
-  pre.code {
-      padding: 0.8rem;
-      font-size: 0.8rem;
-  }
-}
-
-div.code {
-  margin-bottom: 2rem;
-  margin-top: 1.5rem;
-  margin-right: 0.5rem;
-}
-
-div.result {
-  background-color: white;
-  border: solid 2px gray;
-  color: black;
-  padding: 0.5rem;
-  max-width: 800px;
-}
-
-div.console {
-  background-color: black;
-  border: solid 2px gray;
-  font-family: "Lucida Console";
-  color: white;
-  padding: 0.5rem;
-  max-width: 800px;
-}
-
-div.doc-summary {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-div.parts {
-  /*border: solid white;*/
-  display: flex;
-  padding: 0.5rem;
-  margin: 1rem;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-div.parts > a {
-  color: white;
-  background-color: rgb(90, 90, 90, 0.8);
-
-  height: 2rem;
-  display: inline-block;
-  line-height: 1.9;
-  padding: 0.2rem;
-
-  border-radius: 0.5rem;
-
-  text-decoration: none;
-  transition: 200ms;
-}
-
-div.parts > a:active {
-  transform: translate(0%, 10%);
-  background-color: var(--green);
-  -webkit-tap-highlight-color: transparent;
-}
-
-@media (min-width: 640px) {
-  div.parts > a:hover {
-      transform: translate(0%, 10%);
-      background-color: var(--green);
-  }
-}
-a.go-up {
-  outline:none;
-  text-decoration:none;
-  background: var(--green);
-  color: black;
-
-  width: 50px;
-  height: 40px;
-  display:inline-block;
-
-  line-height:2.5;
-  text-align:center;
-  border:solid black 3px;
-  border-radius:20px;
-  
-  position: fixed;
-  right: 2%;
-  bottom: 4%;
-  z-index: 9;
-}
 
 .contact-btn
 {

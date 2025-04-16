@@ -1,6 +1,6 @@
 import {Code, Text} from '../../../types/DocData';
 
-export const genericTypes: (Code | Text)[] = [
+export const genericTypesElements: (Code | Text)[] = [
   {
     type: 'text',
     content: [
@@ -36,7 +36,7 @@ console.log(add<number>(6, 4))
 console.log(add(6, 4)) // Also works
     `,
     result: {
-      type: 'console', css: false,
+      type: 'console',
       content: [
         "[ 1, 2, 3, 'a', 'u' ]",
         "hello world",

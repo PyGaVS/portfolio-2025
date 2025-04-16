@@ -1,6 +1,6 @@
 import {Code, Text} from '../../../types/DocData';
 
-export const conditionalStatements: (Code | Text)[] = [
+export const conditionalStatementsElements: (Code | Text)[] = [
   {
     type: 'code', language: 'javascript',
     content: `
@@ -20,7 +20,7 @@ while(x >= 0){
 }    
     `,
     result: {
-      type: 'console', css: false,
+      type: 'console',
       content: [
         'x is greater than 4',
         '4',
@@ -46,7 +46,7 @@ console.log(check(18));
 console.log(check(17));
     `,
     result: {
-      type: 'console', css: false,
+      type: 'console',
       content: [
         'majeur',
         'mineur'

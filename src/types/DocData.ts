@@ -4,13 +4,18 @@ export interface Code {
   type: 'code';
   content: string;
   language: string;
-  result?: Result;
+  result?: ConsoleResult | WebResult;
 }
 
-export interface Result {
-  type: 'web' | 'console';
-  css: boolean;
-  content: string[] | JSX.Element;
+export interface WebResult {
+  type: 'web';
+  css?: Code;
+  content: JSX.Element | null;
+}
+
+export interface ConsoleResult {
+  type: 'console';
+  content: string[];
 }
 
 export interface Text {

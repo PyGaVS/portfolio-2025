@@ -1,6 +1,6 @@
 import {Code, Text} from '../../../types/DocData';
 
-export const switchStatements: (Code | Text)[] = [
+export const switchStatementsElements: (Code | Text)[] = [
   {
     language: "javascript",
     type: "code",
@@ -49,7 +49,6 @@ fruit2('unknown ', 'fruit'); // Use parameters for custom default value
 (fruits['ki'] ?? fruits.default)('unknown fruit')
     `,
     result: {
-      css: false,
       type: 'console',
       content: [
         'banana',

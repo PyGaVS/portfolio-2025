@@ -19,7 +19,7 @@ function add(v1, v2){
 add(5,6)
     `, 
     result: {
-      css: false, type: 'console', 
+      type: 'console', 
       content: ['11']
     }
   },

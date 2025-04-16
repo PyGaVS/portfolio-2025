@@ -1,6 +1,6 @@
 import {Code, Text} from '../../../types/DocData';
 
-export const indexedArrays: (Code | Text)[] = [
+export const indexedArraysElements: (Code | Text)[] = [
   {
     type: 'code', language: 'javascript',
     content: `
@@ -31,7 +31,6 @@ for(let i of list1){
     `,
     result: {
       type: 'console',
-      css: false,
       content: [
         '3',
         'n°0 : 5',

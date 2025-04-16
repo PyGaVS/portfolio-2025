@@ -7,10 +7,11 @@ import Doc from "../../Components/Doc"
 //Doc elements
 import { jsSyntaxElements } from './TypescriptDoc/Js_syntax';
 import { typingVariablesElements } from './TypescriptDoc/Typing_variables';
-import { indexedArrays } from './TypescriptDoc/Indexed_arrays'
-import { conditionalStatements } from './TypescriptDoc/Conditional_statements';
-import { switchStatements } from './TypescriptDoc/Switch_statements';
-import { genericTypes } from './TypescriptDoc/Generic_types';
+import { indexedArraysElements } from './TypescriptDoc/Indexed_arrays'
+import { conditionalStatementsElements } from './TypescriptDoc/Conditional_statements';
+import { switchStatementsElements } from './TypescriptDoc/Switch_statements';
+import { genericTypesElements } from './TypescriptDoc/Generic_types';
+import { flexboxElements } from './CssDoc/Flexbox';
 
 function Documentation() {
   useEffect(() => {
@@ -41,14 +42,16 @@ function Documentation() {
             'Generate a feature', 'Create routes', 'Create migrations'
             ]}>Laravel</SummaryPart>*/}
         </div>
-        
+        <h2><strong>CSS</strong></h2>
+        <Doc title="Flexbox" elements={flexboxElements}></Doc>
+
         <h2><strong>Javascript / Typescript</strong></h2>
         <Doc title="JS syntax" elements={jsSyntaxElements}></Doc>
         <Doc title="Typing variables" elements={typingVariablesElements}></Doc>
-        <Doc title="Indexed arrays" elements={indexedArrays}></Doc>
-        <Doc title="Conditional statements" elements={conditionalStatements}></Doc>
-        <Doc title="Switch statements" elements={switchStatements}></Doc>
-        <Doc title="Generic types" elements={genericTypes}></Doc>
+        <Doc title="Indexed arrays" elements={indexedArraysElements}></Doc>
+        <Doc title="Conditional statements" elements={conditionalStatementsElements}></Doc>
+        <Doc title="Switch statements" elements={switchStatementsElements}></Doc>
+        <Doc title="Generic types" elements={genericTypesElements}></Doc>
         <Doc title="TS cheat sheets" elements={[
           { type: 'text', content: [{url: "https://www.typescriptlang.org/cheatsheets/"}] }
         ]}></Doc>
