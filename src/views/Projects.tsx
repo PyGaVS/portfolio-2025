@@ -187,7 +187,7 @@ function Projects() {
           </Project>
         </details>
         <details className='big'>
-          <summary id='pokerogue'>Mes contributions</summary>
+          <summary>Mes contributions</summary>
           <Project title='Pokérogue : typescript' id='pokerogue' images={[]}>
           <p className="gray"><a className="blue-link" href="https://pokerogue.net/" target="_blank">Pokérogue </a>
             est un fangame Pokémon inspiré du genre roguelite qui nous propose de faire uniquement des combats 
