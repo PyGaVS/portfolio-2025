@@ -4,7 +4,7 @@ export const flexboxElements: (Code | Text)[] = [
   {
     type: 'text',
     content: [
-      {name: "Comple Flexbox guide here ", url:"https://css-tricks.com/snippets/css/a-guide-to-flexbox/"},
+      {name: "Complete Flexbox guide here ", url:"https://css-tricks.com/snippets/css/a-guide-to-flexbox/"},
       "and one example below :"
     ]
   },

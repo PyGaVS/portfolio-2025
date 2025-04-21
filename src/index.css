@@ -147,27 +147,6 @@ strong.title
   gap: 0px;
 }
 
-div.contact {
-  text-align:center;
-  margin-top: 10%;
-  margin-left: 33%;
-  margin-right: 33%;
-
-  height: min-content;
-  padding: 1rem;
-
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-}
-
-@media (max-width: 640px) {
-  div.contact {
-      margin-top: 40%;
-      margin-left: 10%;
-      margin-right: 10%;
-  }
-}
-
 .address {
   color: white;
   text-decoration: none;

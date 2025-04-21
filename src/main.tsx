@@ -11,6 +11,10 @@ import Hobbies from './views/Hobbies';
 import Projects from './views/Projects';
 import Contact from './views/Contact';
 
+import i18n from './localizations/i18n';
+
+i18n.changeLanguage('en');
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>

@@ -1,4 +1,4 @@
-import { PropsWithChildren, useRef, useEffect } from 'react';
+import { PropsWithChildren  } from 'react';
 import { Code, ConsoleResult, WebResult } from '../types/DocData';
 import DOMPurify from 'dompurify';
 
