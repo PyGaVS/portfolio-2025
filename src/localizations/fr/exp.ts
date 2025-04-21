@@ -33,18 +33,16 @@ export const frExp = {
       de projets sur GitHub (non rémunéré) dont le code est en open-source :`,
       mineralDetails: "étant un framework en Dart permettant de créer des bots sur Discord.",
       pokerogueDetails: "PokéRogue est un fangame Pokémon jouable sur navigateur avec un système de roguelite.",
-      gamelink: "Lien du jeu"
+      detailsLink: "Plus de details"
     },
-    "Novembre 2024": {
-      text: "Travail en intérim chez",
-      duration: "Durée : 1 semaine",
-    },
-    "Décembre 2024 - Mars 2025": {
+    interim: {
       text: "Travail en intérim chez",
     },
-    "Mars 2025": {
-      text: "Travail en intérim chez",
-      duration: "Durée : 1 semaine",
-    }
-  }
+  },
+  week: "semaine",
+  weeks: "semaines",
+  month: "mois",
+  months: "mois",
+  day: "jour",
+  days: "jours"
 };

@@ -32,18 +32,16 @@ export const enExp = {
       text: `Not having a driver's license at the time, I started contributing to two open-source projects on GitHub (unpaid):`,
       mineralDetails: "is a Dart framework for building Discord bots.",
       pokerogueDetails: "PokéRogue is a browser-based Pokémon fangame with roguelite mechanics.",
-      gamelink: "Game link"
+      detailsLink: "More details"
     },
-    "Novembre 2024": {
-      text: "Temporary work at",
-      duration: "Duration: 1 week"
-    },
-    "Décembre 2024 - Mars 2025": {
+    interim: {
       text: "Temporary work at",
     },
-    "Mars 2025": {
-      text: "Temporary work at",
-      duration: "Duration: 1 week"
-    }
-  }
+  },
+  week: "week",
+  weeks: "weeks",
+  month: "month",
+  months: "months",
+  day: "day",
+  days: "days"
 };

@@ -188,7 +188,7 @@ function Projects() {
         </details>
         <details className='big'>
           <summary>Mes contributions</summary>
-          <Project title='Pokérogue : typescript' images={[]}>
+          <Project title='Pokérogue : typescript' id='pokerogue' images={[]}>
           <p className="gray"><a className="blue-link" href="https://pokerogue.net/" target="_blank">Pokérogue </a>
             est un fangame Pokémon inspiré du genre roguelite qui nous propose de faire uniquement des combats 
             tout en collectant des objets cumulables et en explorant divers biomes pour affronter des adversaires 
@@ -215,9 +215,13 @@ function Projects() {
           <p className="gray">Collaboration avec une équipe de traduction pour traduire le message indiquant l'effet de l'illusion.</p>
           <p className="gray">Manipulation de l'UI du jeu.</p>
           <p className="gray">Ce talent est actuellement implémenté dans la version beta du jeu.</p>
-          <p className="gray"> Lien du PR GitHub :
-            <a href="https://github.com/pagefaultgames/pokerogue/pull/3273" className="white-link" 
+          <p className="gray"> Lien des PR GitHub :</p>
+          <p><a href="https://github.com/pagefaultgames/pokerogue/pull/3273" className="white-link" 
             target="_blank"> [Ability] Implement Illusion #3273</a></p>
+          <p><a href="https://github.com/pagefaultgames/pokerogue-locales/pull/26" className="white-link" 
+            target="_blank"> Add illusionBreak localizations #26</a></p>
+          <p><a href="https://github.com/pagefaultgames/pokerogue/pull/5675" className="white-link" 
+            target="_blank"> [Bug] Pokemon with illusion imitate the cry of the illusion #5675</a></p>
           </Project>
         </details>
       </div>
