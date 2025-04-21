@@ -13,7 +13,7 @@ import Contact from './views/Contact';
 
 import i18n from './localizations/i18n';
 
-i18n.changeLanguage('en');
+i18n.changeLanguage(navigator.language);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
