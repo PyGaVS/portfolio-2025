@@ -338,15 +338,5 @@ div.hobbies > div > * {
 
 }
 
-div.black-band {
-  background-color: black;
 
-  /*width: 100%;*/
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding: 1.5%;
-  padding-left: 4vw;
-}
 

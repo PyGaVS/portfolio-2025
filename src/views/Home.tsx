@@ -22,7 +22,12 @@ function Home() {
       </section>
       <footer>
       <div className="black-band">
-      <NavLink className="white-link" to="contact">{t("home.tab.contact")} </NavLink>&thinsp;<i className="fa-solid fa-envelope fa-bounce"></i>
+        <section>
+          <NavLink className="white-link" to="contact">{t("home.tab.contact")} </NavLink>&thinsp;<i className="fa-solid fa-envelope fa-bounce"></i>
+        </section>
+        <section>
+          <a className="white-link" href="https://github.com/Stage-2024/tui-diagnostic-tools" target='_blank'>Made with 💖 by me</a>
+        </section>
       </div>
       </footer>
     </>

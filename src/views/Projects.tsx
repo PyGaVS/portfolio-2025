@@ -214,7 +214,7 @@ function Projects() {
           <p className="gray">Implémentation du talent ainsi que des tests unitaires correspondants.</p>
           <p className="gray">Collaboration avec une équipe de traduction pour traduire le message indiquant l'effet de l'illusion.</p>
           <p className="gray">Manipulation de l'UI du jeu.</p>
-          <p className="gray">Ce talent est actuellement implémenté dans la version beta du jeu.</p>
+          <p className="gray">Ce talent est maintenant implémenté dans le jeu.</p>
           <p className="gray"> Lien des PR GitHub :</p>
           <p><a href="https://github.com/pagefaultgames/pokerogue/pull/3273" className="white-link" 
             target="_blank"> [Ability] Implement Illusion #3273</a></p>
@@ -222,6 +222,8 @@ function Projects() {
             target="_blank"> Add illusionBreak localizations #26</a></p>
           <p><a href="https://github.com/pagefaultgames/pokerogue/pull/5675" className="white-link" 
             target="_blank"> [Bug] Pokemon with illusion imitate the cry of the illusion #5675</a></p>
+          <p><a href="https://github.com/pagefaultgames/pokerogue/pull/5772" className="white-link" 
+            target="_blank"> [Bug] Fix some move using the type of the illusion instead of the actual type #5772</a></p>
           </Project>
         </details>
       </div>
