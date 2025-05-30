@@ -73,7 +73,7 @@ function Exp() {
             </a> (3 {t("exp.days")})</p>
           <p className='gray'><a className="blue-link" href="https://sucre.plus/" target="_blank">Sucre+
             </a> (1 {t("exp.day")})</p>
-          <p className='gray'><a className="blue-link" href="https://amb-marbrerie.com/" target="_blank"> Atelier Marbreri Bremand
+          <p className='gray'><a className="blue-link" href="https://amb-marbrerie.com/" target="_blank"> Atelier Marbrerie Bremand
             </a> (1 {t("exp.month")})</p>
         </div>
       </details>
