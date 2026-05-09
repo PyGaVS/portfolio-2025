@@ -1,5 +1,20 @@
+:root {
+  /* Niveau de zoom du background. 100% = pas de zoom (cover-like).
+     150-200% = pan subtil. 250-300% = équilibre. 500%+ = très immersif
+     mais demande des sources HD (4K+) sinon ça blurre. */
+  --bg-zoom: 150%;
+}
+
 html {
-  background-image : url('./../img/void.jpg');
+  /* Couleur de fond avant que l'image ne charge (évite un flash blanc) */
+  background-color: #090a0f;
+  /* L'URL et la position sont injectées par src/lib/background.ts au load
+     (pioche aléatoire de l'image + génération de 6 keyframes uniques pour
+     l'animation de pan via Web Animations API).
+     Fallback void.jpg si la variable n'est pas encore définie. */
+  background-image: var(--bg-image, url('./../img/void.jpg'));
+  background-size: var(--bg-zoom);
+  background-position: 50% 50%;
   background-attachment: fixed;
   scroll-behavior: smooth;
 }

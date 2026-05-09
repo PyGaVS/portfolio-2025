@@ -2,6 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import 'prismjs/themes/prism-tomorrow.css';
+import { initSpaceBackground } from './lib/background';
+
+// Choisit un background spatial aléatoire + lance l'animation de pan
+// avec un parcours unique à chaque visite (avant le premier render)
+initSpaceBackground();
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from './views/Home';
 import Documentation from './views/DocView/Documentation';
