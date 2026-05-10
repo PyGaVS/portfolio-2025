@@ -102,7 +102,7 @@ footer {
 }
 
 .go-up:hover {
-  background: var(--light-green);
+  background: white;
   cursor: pointer;
 
 }

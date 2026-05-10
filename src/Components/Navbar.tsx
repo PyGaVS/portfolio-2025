@@ -3,11 +3,10 @@ import { useTranslation } from 'react-i18next'
 import pp from '../assets/img/pp.png'
 
 const items = [
-  { route: 'exp',      key: 'home.tab.exp' },
-  { route: 'skills',   key: 'home.tab.skills' },
-  { route: 'hobbies',  key: 'home.tab.hobbies' },
-  { route: 'projects', key: 'home.tab.projects' },
-  { route: 'contact',  key: 'home.tab.contact' },
+  { route: '/exp',      key: 'home.tab.exp' },
+  { route: '/skills',   key: 'home.tab.skills' },
+  { route: '/hobbies',  key: 'home.tab.hobbies' },
+  { route: '/projects', key: 'home.tab.projects' },
 ] as const
 
 export default function Navbar() {
@@ -42,9 +41,9 @@ export default function Navbar() {
                   [
                     'text-white no-underline text-xs md:text-base',
                     'uppercase tracking-wider font-medium',
-                    'transition-colors duration-200',
-                    'hover:text-bright-green',
-                    isActive ? 'text-bright-green' : '',
+                    'transition-[text-shadow] duration-200',
+                    'hover:text-shadow-glow',
+                    isActive ? 'text-shadow-glow' : '',
                   ].join(' ')
                 }
               >

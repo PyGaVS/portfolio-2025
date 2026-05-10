@@ -1,11 +1,10 @@
-import Header from '../Components/Header'
-import List from '../Components/List'
-import skills from '../data/skills'
+import Layout from '@/Components/Layout'
+import List from '@/Components/List'
+import skills from '@/data/skills'
 
 function Skills() {
   return (
-    <>
-      <Header>Mes compétences</Header>
+    <Layout>
       <div className="skill">
         {skills.map((section, i) => (
           <details key={i} open={section.open}>
@@ -14,7 +13,7 @@ function Skills() {
           </details>
         ))}
       </div>
-    </>
+    </Layout>
   )
 }
 

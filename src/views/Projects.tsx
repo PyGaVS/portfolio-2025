@@ -1,5 +1,5 @@
 import { Fragment, type Key } from 'react'
-import Header from '../Components/Header'
+import Layout from '@/Components/Layout'
 import Project from '../Components/Project'
 import projectSections from '../data/projects'
 import type { Inline, ProjectBlock } from '../types/ProjectData'
@@ -58,8 +58,7 @@ const renderBlock = (block: ProjectBlock, key: Key) => {
 
 function Projects() {
   return (
-    <>
-      <Header>Mes réalisations</Header>
+    <Layout>
       <br />
       <div className="paragraph">
         {projectSections.map((section, si) => (
@@ -78,7 +77,7 @@ function Projects() {
           </details>
         ))}
       </div>
-    </>
+    </Layout>
   )
 }
 

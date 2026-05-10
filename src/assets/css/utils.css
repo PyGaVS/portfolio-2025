@@ -1,13 +1,11 @@
 :root {
-  --green: rgb(43, 179, 89);
-  --light-green: rgb(63, 199, 109);
-  --bright-green: rgb(122, 248, 164);
+  /* Couleur primaire — passée du vert au blanc */
   --gray-3-green: #343835;
   --gray-0: #cecece;
-  --gray-1: #969696;
+  --gray-1: rgb(150 150 150 / 0.9);
   --gray-2: #6a6a6a;
-  --gray-3: #323232;
-  --gray-4: #1e1e1e;
+  --gray-3: rgb(50 50 50);
+  --gray-4: rgb(30 30 30 / 0.8);
   --purple: #b26eff;
   --yellow: #ecf56b;
   --red: #ff5d5d;

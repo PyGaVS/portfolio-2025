@@ -1,14 +1,13 @@
-import Header from '../Components/Header';
 import esport from '../assets/img/hobbies/esport.jpg';
 import pullUp from '../assets/img/hobbies/pull_up.jpg';
 import code from '../assets/img/hobbies/code.jpg';
 import Hobbie from '../Components/Hobbie';
+import Layout from '@/Components/Layout';
 
 function Hobbies() {
 
   return (
-    <>
-      <Header>En dehors du boulot</Header>
+    <Layout>
       <div className='space-around-box'>
       <Hobbie img={esport} title='Compétition esportive (Super Smash Bros Ultimate)'>
         <p className='bubble blue-bg'>gestion du stress</p>
@@ -35,7 +34,7 @@ function Hobbies() {
           <h2><strong>Mes centres d'intérêts secondaires</strong></h2>
           <p className="gray">Manga, roller, jeux vidéos</p>
       </div>
-    </>
+    </Layout>
   )
 }
 

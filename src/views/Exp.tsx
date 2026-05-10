@@ -1,4 +1,4 @@
-import Header from '../Components/Header'
+import Layout from '@/Components/Layout';
 import "./../localizations/i18n";
 import { useTranslation } from "react-i18next";
 
@@ -7,9 +7,7 @@ function Exp() {
   console.log(i18n.language)
 
   return (
-    <>
-      <Header>{t("exp.header")}</Header>
-      
+    <Layout>
       <details>
         <summary>{t("exp.details.studies")}</summary>
         <div className="paragraph">
@@ -77,7 +75,7 @@ function Exp() {
             </a> (1 {t("exp.month")})</p>
         </div>
       </details>
-    </>
+    </Layout>
   );
 }
 
