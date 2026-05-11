@@ -4,7 +4,7 @@ import skills from '@/data/skills'
 
 function Skills() {
   return (
-    <Layout>
+    <Layout title="Mes compétences">
       <div className="skill">
         {skills.map((section, i) => (
           <details key={i} open={section.open}>

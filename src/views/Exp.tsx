@@ -7,7 +7,7 @@ function Exp() {
   console.log(i18n.language)
 
   return (
-    <Layout>
+    <Layout title={t("exp.header")}>
       <details>
         <summary>{t("exp.details.studies")}</summary>
         <div className="paragraph">

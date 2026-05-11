@@ -2,30 +2,16 @@ import type { PropsWithChildren } from 'react'
 import { NavLink } from 'react-router'
 import { useTranslation } from 'react-i18next'
 import Navbar from '@/Components/Navbar'
+import { RetroGrid } from './ui/retro-grid'
 
 interface Props {
-  /**
-   * Affiche le footer (black-band fixe en bas) en plus de la navbar.
-   * À true uniquement sur la Home.
-   */
+  title?: string
   footer?: boolean
 }
 
-/**
- * Layout standard du portfolio :
- *   - Navbar fixe en haut (toujours)
- *   - <main> avec padding-top pour ne pas empiéter sur la navbar
- *   - Footer optionnel (black-band fixe en bas) — seulement sur Home
- *
- * Les vues l'enveloppent autour de leur contenu :
- *   <Layout>            // pour les vues classiques
- *     {…contenu…}
- *   </Layout>
- *
- *   <Layout footer />    // pour la Home (avec footer, contenu vide possible)
- */
 export default function Layout({
   children,
+  title,
   footer = false,
 }: PropsWithChildren<Props>) {
   const { t } = useTranslation()
@@ -33,25 +19,36 @@ export default function Layout({
   return (
     <>
       <Navbar />
+      <main className={`pt-16 min-h-screen${footer ? ' pb-24' : ''}`}>
+        {title && (
+          <h1
+            className={[
+              'w-fit mx-auto mb-10 mt-4',
+              'px-6 md:px-8 py-3 md:py-4',
+              'text-4xl md:text-6xl font-bold text-center',
 
-      {/* pt-20 (~5rem) = espace réservé pour la navbar fixe (h ≈ 64px + bordure)
-          pb-24 ajouté quand le footer fixe est présent, pour ne pas masquer
-          le bas de la page. */}
-      <main className={`pt-20 min-h-screen${footer ? ' pb-24' : ''}`}>
+              'glow-text glassy',
+            ].join(' ')}
+          >
+            {title}
+          </h1>
+        )}
         {children}
       </main>
 
       {footer && (
-        <footer>
-          <div className="black-band">
-            <section>
+        <footer className='fixed inset-x-0 bottom-0 h-18'>
+          <RetroGrid cellSize={80} angle={78} darkLineColor='rgba(255, 255, 255, 1)' lightLineColor='white' />
+          <div className="
+            flex justify-between items-center h-full px-[4vw] bg-black/50
+            border-t border-white/40
+          ">
+            <section className='glassy px-3 md:px-4 py-1 md:py-2'>
               <NavLink className="white-link" to="contact">
                 {t('home.tab.contact')}{' '}
               </NavLink>
-              &thinsp;
-              <i className="fa-solid fa-envelope fa-bounce" />
             </section>
-            <section>
+            <section className='glassy px-3 md:px-4 py-1 md:py-2'>
               <a
                 className="white-link"
                 href="https://github.com/PyGaVS/portfolio-2025"

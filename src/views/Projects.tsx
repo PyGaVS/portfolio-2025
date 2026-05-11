@@ -58,8 +58,7 @@ const renderBlock = (block: ProjectBlock, key: Key) => {
 
 function Projects() {
   return (
-    <Layout>
-      <br />
+    <Layout title="Mes réalisations">
       <div className="paragraph">
         {projectSections.map((section, si) => (
           <details key={si} className="big">

@@ -7,7 +7,7 @@ import Layout from '@/Components/Layout';
 function Hobbies() {
 
   return (
-    <Layout>
+    <Layout title="Mes centres d'intérêt">
       <div className='space-around-box'>
       <Hobbie img={esport} title='Compétition esportive (Super Smash Bros Ultimate)'>
         <p className='bubble blue-bg'>gestion du stress</p>
