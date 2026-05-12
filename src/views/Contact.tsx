@@ -1,6 +1,6 @@
-import Header from '../Components/Header'
 import "./../localizations/i18n";
 import { useTranslation } from "react-i18next";
+import Layout from '@/Components/Layout';
 
 
 
@@ -9,10 +9,9 @@ function Contact() {
   console.log(i18n.language)
 
   return (
-    <>
-    <Header>Me contacter</Header>
+    <Layout>
     <div className='contact-row'>
-      <div>
+      <div className='glassy-dark'>
       <form action="https://formspree.io/f/mdkgnddj" method="POST">
         <div className="holder">
           <input type='string' name='Nom' required />
@@ -30,7 +29,7 @@ function Contact() {
       </form>
       </div>
 
-      <div>
+      <div className='glassy-dark'>
         <p><a className="white-link" href ="mailto:lylian270104@gmail.com"> 
           <i className="fa-regular fa-envelope"></i> lylian270104@gmail.com</a> </p>
         <p><a className="white-link" href ="https://github.com/PyGaVS" target="_blank"> 
@@ -40,7 +39,7 @@ function Contact() {
           <i className="fa-brands fa-linkedin"></i> Lylian BALL</a> </p>
       </div>
     </div>
-    </>
+    </Layout>
   )
 }
 
