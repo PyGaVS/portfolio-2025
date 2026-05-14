@@ -8,7 +8,7 @@ function Hobbies() {
 
   return (
     <Layout title="Mes centres d'intérêt">
-      <div className='space-around-box'>
+      <div className='flex justify-around flex-wra'>
       <Hobbie img={esport} title='Compétition esportive (Super Smash Bros Ultimate)'>
         <p className='bubble blue-bg'>gestion du stress</p>
         <p className='bubble purple-bg'>concentration</p>

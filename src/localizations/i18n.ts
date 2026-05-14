@@ -1,11 +1,9 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { enHome } from "./en/home";
-import { enExp } from "./en/exp";
 import { enContact } from "./en/contact";
 
 import { frHome } from "./fr/home";
-import { frExp } from "./fr/exp";
 import { frContact } from "./fr/contact";
 
 
@@ -16,7 +14,6 @@ i18n.use(initReactI18next).init({
     en: {
       translation: {
         home: enHome,
-        exp: enExp,
         contact: enContact
       }
     },
@@ -24,7 +21,6 @@ i18n.use(initReactI18next).init({
     fr: {
       translation: {
         home: frHome,
-        exp: frExp,
         contact: frContact
       }
     },

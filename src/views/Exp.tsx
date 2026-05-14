@@ -1,78 +1,108 @@
+import { Fragment, type Key } from 'react';
 import Layout from '@/Components/Layout';
-import "./../localizations/i18n";
-import { useTranslation } from "react-i18next";
+import exp from '@/data/exp';
+import type { Inline, Link, ProfExpEntry } from '@/types/ExpData';
+
+const renderInline = (seg: Inline, key: Key) => {
+  if (seg.kind === 'text') return <Fragment key={key}>{seg.value}</Fragment>;
+  return (
+    <a
+      key={key}
+      className={`${seg.style ?? 'blue'}-link`}
+      href={seg.href}
+      target="_blank"
+      rel="noreferrer"
+    >
+      {seg.label}
+    </a>
+  );
+};
+
+const renderLink = ({ label, href, style }: Link) => (
+  <a
+    className={`${style ?? 'blue'}-link`}
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+  >
+    {label}
+  </a>
+);
+
+const renderProfEntry = (entry: ProfExpEntry, i: number) => {
+  switch (entry.kind) {
+    case 'simple':
+      return (
+        <Fragment key={i}>
+          <h2><strong>{entry.period}</strong></h2>
+          <p className="gray">{entry.segments.map((s, j) => renderInline(s, j))}</p>
+          <p className="gray">{entry.duration}</p>
+        </Fragment>
+      );
+
+    case 'contrib':
+      return (
+        <Fragment key={i}>
+          <h2><strong>{entry.period}</strong></h2>
+          <p className="gray">{entry.intro}</p>
+          {entry.contribs.map((c, ci) => (
+            <Fragment key={ci}>
+              {ci > 0 && <br />}
+              <p><strong>{c.title} </strong></p>
+              {c.prs.map((pr, pi) => (
+                <p key={pi}>{renderLink(pr)}</p>
+              ))}
+              {c.description && (
+                <p className="gray">{c.description.map((s, j) => renderInline(s, j))}</p>
+              )}
+              {c.detailsLink && <p>{renderLink(c.detailsLink)}</p>}
+            </Fragment>
+          ))}
+        </Fragment>
+      );
+
+    case 'interim':
+      return (
+        <Fragment key={i}>
+          <h2><strong>{entry.period}</strong></h2>
+          <p className="gray">{entry.intro}</p>
+          {entry.jobs.map((job, ji) => (
+            <p key={ji} className="gray">
+              {renderLink(job.link)} ({job.duration})
+            </p>
+          ))}
+        </Fragment>
+      );
+  }
+};
 
 function Exp() {
-  const { t, i18n } = useTranslation();
-  console.log(i18n.language)
-
   return (
-    <Layout title={t("exp.header")}>
+    <Layout title={exp.header}>
       <details>
-        <summary>{t("exp.details.studies")}</summary>
+        <summary>{exp.studies.summary}</summary>
         <div className="paragraph">
-          <h2><strong>2018-2019</strong></h2>
-          <p className="gray">{t("exp.studies.2018-2019")}</p>
-          <h2><strong>2019-2022</strong></h2>
-          <p className="gray">{t("exp.studies.2019-2022")}</p>
-          <strong>{t("exp.studies.specialties.title")} : </strong>
-          <p className="gray">{t("exp.studies.specialties.digitalScience")}</p>
-          <p className="gray">{t("exp.studies.specialties.mathematics")}</p>
-          <h2><strong>2022-2024</strong></h2>
-          <p className="gray">{t("exp.studies.2022-2024")}</p>
+          {exp.studies.entries.map((entry, i) => (
+            <Fragment key={i}>
+              <h2><strong>{entry.period}</strong></h2>
+              <p className="gray">{entry.text}</p>
+              {entry.specialties && (
+                <>
+                  <strong>{entry.specialties.title} : </strong>
+                  {entry.specialties.items.map((item, ii) => (
+                    <p key={ii} className="gray">{item}</p>
+                  ))}
+                </>
+              )}
+            </Fragment>
+          ))}
         </div>
       </details>
 
       <details>
-        <summary>{t("exp.details.profExp")}</summary>
+        <summary>{exp.profExp.summary}</summary>
         <div className="paragraph">
-          <h2><strong>2019</strong></h2>
-          <p className="gray">{t("exp.profExp.2019.text")}</p>
-          <p className="gray">{t("exp.profExp.2019.duration")}</p>
-
-          <h2><strong>Mai 2023</strong></h2>
-          <p className="gray">{t("exp.profExp.Mai 2023.text")} <a href="https://mineral-foundation.org/" className="blue-link" target="_blank">
-            Mineral</a>)</p>
-          <p className="gray">{t("exp.profExp.Mai 2023.duration")}</p>
-
-          <h2><strong>Janvier - Févirer 2024</strong></h2>
-          <p className="gray">{t("exp.profExp.Jan/Feb 2024.text")} <a href="https://www.oomade.com/" className="blue-link" target="_blank">
-            Oomade</a></p>
-          <p className="gray">{t("exp.profExp.Jan/Feb 2024.duration")}</p>
-
-          <h2><strong>Eté 2024 - Novembre 2024</strong></h2>
-            <p className="gray">{t("exp.profExp.Sum/Nov 2024.text")}</p>
-            <p><strong>Mineral : </strong></p>
-            <a href="https://github.com/mineral-dart/core/pull/180" className="blue-link" target="_blank">
-              Remove member from cache when ban #180</a>
-            <p className="gray">
-              <a href="https://github.com/pagefaultgames/pokerogue/pull/3273" className="blue-link" target="_blank">
-                Mineral</a> {t("exp.profExp.Sum/Nov 2024.mineralDetails")}</p>
-            <br />
-            <p><strong>PokéRogue : </strong></p>
-            <p><a href="https://github.com/pagefaultgames/pokerogue/pull/1831" className="blue-link" target="_blank">
-                [Move] Add Retaliate double damage condition #1831</a></p>
-            <p><a href="https://github.com/pagefaultgames/pokerogue/pull/3273" className="blue-link" target="_blank">
-                [Ability] Implement Illusion #3273</a></p>
-            <p><a href="https://github.com/pagefaultgames/pokerogue-locales/pull/26" className="blue-link" target="_blank">
-                Add illusionBreak localizations #26</a></p>
-            <p className="gray">{t("exp.profExp.Sum/Nov 2024.pokerogueDetails")}</p>
-            <p><a href="https://portfolio-2025-alpha-roan.vercel.app/projects#pokerogue" className="blue-link" target="_blank">
-              {t("exp.profExp.Sum/Nov 2024.detailsLink")}</a></p>
-          <h2><strong>Novembre 2024 - Aujourd'hui</strong></h2>
-          <p className='gray'>{t("exp.profExp.interim.text")} :</p>
-          <p className='gray'><a className="blue-link" href="https://www.thomasbrioche.com/" target="_blank"> Thomas Brioche
-            </a> (1 {t("exp.week")})</p>
-          <p className='gray'><a className="blue-link" href="http://www.servilegume-industrie.com/" target="_blank">Servilegume Industrie
-            </a> (4 {t("exp.months")})</p>
-          <p className='gray'><a className="blue-link" href="https://www.r-p-ouest.fr/" target="_blank">RP-Ouest
-            </a> (1 {t("exp.week")})</p>
-          <p className='gray'><a className="blue-link" href="https://www.miditracage-esvia.com/" target="_blank">Esvia
-            </a> (3 {t("exp.days")})</p>
-          <p className='gray'><a className="blue-link" href="https://sucre.plus/" target="_blank">Sucre+
-            </a> (1 {t("exp.day")})</p>
-          <p className='gray'><a className="blue-link" href="https://amb-marbrerie.com/" target="_blank"> Atelier Marbrerie Bremand
-            </a> (1 {t("exp.month")})</p>
+          {exp.profExp.entries.map(renderProfEntry)}
         </div>
       </details>
     </Layout>

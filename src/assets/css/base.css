@@ -49,12 +49,6 @@ img:not(.pp) {
   background-color: var(--blue);
 }
 
-.space-around-box {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
 .row-center {
   display: flex;
   justify-content: center;
