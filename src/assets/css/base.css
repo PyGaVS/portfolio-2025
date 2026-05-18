@@ -22,7 +22,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-img:not(.pp) {
+img:not(.pp, .no-border) {
   border-radius: 4px;
   border: solid rgb(255, 255, 255, .10);
   animation: borderColor 5s infinite;

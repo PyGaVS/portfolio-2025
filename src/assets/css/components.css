@@ -57,7 +57,7 @@ iframe.web {
   resize: both;
 }
 
-.align-result{
+.align-result {
   display:flex;
   flex-wrap: wrap;
   align-items: center;

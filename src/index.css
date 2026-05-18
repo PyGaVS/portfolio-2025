@@ -66,6 +66,7 @@
     text-shadow: var(--text-shadow-glow);
   }
 
+
   /* SCROLLBAR ─────────────────────────────────────────────────────────────── */
   body::-webkit-scrollbar {
     width: 10px;
