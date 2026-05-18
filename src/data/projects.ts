@@ -152,7 +152,7 @@ const sections: ProjectSection[] = [
           {
             title: 'Site de réservation de véhicule : laravel headless',
             images: [
-              { source: seven, width: 1000 },
+              { source: seven, width: 1000, featured: true },
               { source: sevenForm, width: 1000 },
             ],
             body: [
@@ -189,7 +189,7 @@ const sections: ProjectSection[] = [
           {
             title: 'Application de discussion : Dart Flutter',
             images: [
-              { source: selenium, width: 300 },
+              { source: selenium, width: 300, featured: true },
               { source: seleniumSearch, width: 300 },
               { source: seleniumReport, width: 300 },
             ],
@@ -228,7 +228,7 @@ const sections: ProjectSection[] = [
           {
             title: 'Outil de gestion cloud en terminal de commande : react/typescript',
             images: [
-              { source: tuiHomeview, width: 1000 },
+              { source: tuiHomeview, width: 1000, featured: true },
               { source: tui, width: 1000 },
               { source: tuiSearch, width: 1000 },
             ],

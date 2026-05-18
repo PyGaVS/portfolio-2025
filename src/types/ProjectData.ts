@@ -1,4 +1,8 @@
-export type ProjectImage = { source: string; width: number };
+export type ProjectImage = {
+  source: string;
+  width: number;
+  featured?: boolean;            // affichée dans le slideshow de la Home
+};
 
 export type Inline =
   | { kind: 'text'; value: string }
