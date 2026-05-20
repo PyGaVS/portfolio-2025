@@ -118,7 +118,7 @@ function InterimCard({ entry }: { entry: InterimProfEntry }) {
     <div className="text-white">
       <i className="fa-solid fa-briefcase text-2xl text-white/90 mb-3 block" />
       <p>{entry.intro}</p>
-      <ul className="list-disc list-inside mt-2 space-y-1">
+      <ul className="list-disc mt-2 space-y-1">
         {entry.jobs.map((job, i) => (
           <li key={i}>
             <a
@@ -171,7 +171,7 @@ function Exp() {
                 </svg>
 
                 {/* Carte */}
-                <div className={isLeft ? 'pr-8 flex justify-end' : 'col-start-2 pl-8'}>
+                <div className={isLeft ? 'md:pr-8 pr-2 flex' : 'col-start-2 md:pl-8 pl-2 flex'}>
                   <div className="glassy p-5 max-w-md w-full">
                     {entry.media && (
                       <img

@@ -1,8 +1,5 @@
 import type { Inline, ProjectSection } from '../types/ProjectData';
 
-import fractions from '../assets/img/projects/fraction.jpg';
-import mcwebsite from '../assets/img/projects/mcwebsite.jpg';
-import htmlGenerator from '../assets/img/projects/htmlGenerator.jpg';
 import reservations from '../assets/img/projects/reservation.jpg';
 import alizon from '../assets/img/projects/alizon.jpg';
 import inscription from '../assets/img/projects/inscription.jpg';
@@ -16,6 +13,10 @@ import sevenMcd from '../assets/img/projects/Seven-mcd.jpg';
 import tui from '../assets/img/projects/tui.jpg';
 import tuiHomeview from '../assets/img/projects/tui-homeview.jpg';
 import tuiSearch from '../assets/img/projects/tui-search.jpg';
+import workout6 from '../assets/img/projects/workout_app/image6.png';
+import workout8 from '../assets/img/projects/workout_app/image8.png';
+import workout10 from '../assets/img/projects/workout_app/image10.png';
+import workout12 from '../assets/img/projects/workout_app/image12.png';
 
 // Helpers pour construire des segments inline de manière compacte
 const t = (value: string): Inline => ({ kind: 'text', value });
@@ -27,7 +28,8 @@ const link = (
 const strong = (value: string): Inline => ({ kind: 'strong', value });
 
 const sections: ProjectSection[] = [
-  // ─── Mes réalisations perso ─────────────────────────────────────────────────
+  // ─── Mes réalisations perso
+  /*
   {
     heading: 'Mes réalisations perso',
     groups: [
@@ -80,8 +82,9 @@ const sections: ProjectSection[] = [
       },
     ],
   },
+  */
 
-  // ─── Lors de mon BTS SIO ────────────────────────────────────────────────────
+  // ─── Lors de mon BTS SIO
   {
     heading: 'Lors de mon BTS SIO',
     groups: [
@@ -152,7 +155,7 @@ const sections: ProjectSection[] = [
           {
             title: 'Site de réservation de véhicule : laravel headless',
             images: [
-              { source: seven, width: 1000, featured: true },
+              { source: seven, width: 1000 },
               { source: sevenForm, width: 1000 },
             ],
             body: [
@@ -189,7 +192,7 @@ const sections: ProjectSection[] = [
           {
             title: 'Application de discussion : Dart Flutter',
             images: [
-              { source: selenium, width: 300, featured: true },
+              { source: selenium, width: 300 },
               { source: seleniumSearch, width: 300 },
               { source: seleniumReport, width: 300 },
             ],
@@ -274,7 +277,62 @@ const sections: ProjectSection[] = [
     ],
   },
 
-  // ─── Mes contributions ──────────────────────────────────────────────────────
+  // ─── Lors de mon CDA
+  {
+    heading: 'Lors de mon CDA',
+    groups: [
+      {
+        projects: [
+          {
+            title: 'Muscu App — suivi de séances de musculation : React + AdonisJS',
+            images: [
+              { source: workout8, width: 500, featured: true },
+              { source: workout10, width: 500 },
+              { source: workout6, width: 500 },
+              { source: workout12, width: 500 },
+            ],
+            body: [
+              {
+                kind: 'p',
+                text: "Application web full-stack de suivi d'entraînements de musculation, développée en équipe avec Alexandre Bourguignon dans le cadre du CDA.",
+              },
+              {
+                kind: 'p',
+                text: "L'utilisateur crée ses séances, enregistre ses exercices (séries, répétitions, charges) et suit sa progression via un dashboard graphique.",
+              },
+              {
+                kind: 'p',
+                text: 'Fonctionnalités principales :',
+              },
+              {
+                kind: 'ul',
+                items: [
+                  "Authentification (inscription, connexion, codes d'accès)",
+                  "Bibliothèque d'exercices structurée par muscle et par bloc d'exercices",
+                  "Création / édition de séances avec historique complet",
+                  "Dashboard de statistiques avec graphiques (volume, progression)",
+                  "Backoffice d'administration",
+                ],
+              },
+              {
+                kind: 'p',
+                text: 'Stack technique :',
+              },
+              {
+                kind: 'ul',
+                items: [
+                  'Backend : AdonisJS 7 (TypeScript) — API REST, architecture domain-driven',
+                  'Frontend : React 19, TypeScript, Tailwind v4, Radix UI, Chart.js + Recharts, GSAP, Lucide',
+                  'Containerisation : Docker (compose dev + prod)',
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  // ─── Mes contributions
   {
     heading: 'Mes contributions',
     groups: [

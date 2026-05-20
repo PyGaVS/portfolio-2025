@@ -44,7 +44,7 @@ export default function ProjectSlideshow() {
             <img
               src={current.source}
               alt="featured project"
-              className="max-w-full max-h-full object-contain absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              className="max-w-full max-h-full object-contain absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 anim-border"
             />
           </motion.div>
         </AnimatePresence>

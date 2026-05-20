@@ -113,6 +113,7 @@ const exp: ExpData = {
         { link: { label: 'Esvia', href: 'https://www.miditracage-esvia.com/' }, duration: '3 jours' },
         { link: { label: 'Sucre+', href: 'https://sucre.plus/' }, duration: '1 jour' },
         { link: { label: 'Atelier Marbrerie Bremand', href: 'https://amb-marbrerie.com/' }, duration: '1 mois' },
+        { link : { label: 'Serta', href: 'https://serta-group.fr/' }, duration: '1 mois' },
       ],
     },
     {

@@ -304,18 +304,6 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  details > summary::after {
-    position: absolute;
-    content: "+";
-    right: 26px;
-  }
-
-  details[open] > summary::after {
-    position: absolute;
-    content: "-";
-    right: 26px;
-  }
-
   details.big {
     padding: 0.5rem;
     margin-bottom: 3rem;
