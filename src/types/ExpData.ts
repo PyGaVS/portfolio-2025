@@ -4,7 +4,14 @@ export type Inline =
 
 export type Link = { label: string; href: string; style?: 'blue' | 'white' };
 
+export type Media = {
+  type: 'image' | 'video';
+  url: string;
+  alt?: string;
+};
+
 export type StudyEntry = {
+  kind: 'study';
   period: string;
   text: string;
   link?: Link;            // lien optionnel rendu inline à la fin du text
@@ -12,6 +19,7 @@ export type StudyEntry = {
     title: string;
     items: string[];
   };
+  media?: Media;
 };
 
 export type SimpleProfEntry = {
@@ -19,6 +27,7 @@ export type SimpleProfEntry = {
   period: string;
   segments: Inline[];
   duration: string;
+  media?: Media;
 };
 
 export type Contribution = {
@@ -33,6 +42,7 @@ export type ContribProfEntry = {
   period: string;
   intro: string;
   contribs: Contribution[];
+  media?: Media;
 };
 
 export type InterimJob = {
@@ -45,18 +55,20 @@ export type InterimProfEntry = {
   period: string;
   intro: string;
   jobs: InterimJob[];
+  media?: Media;
 };
 
+// Union de toutes les entries possibles — discriminée par `kind`
+export type ExpEntry =
+  | StudyEntry
+  | SimpleProfEntry
+  | ContribProfEntry
+  | InterimProfEntry;
+
+// Pour la rétro-compat / typage, on conserve l'alias historique
 export type ProfExpEntry = SimpleProfEntry | ContribProfEntry | InterimProfEntry;
 
 export type ExpData = {
   header: string;
-  studies: {
-    summary: string;
-    entries: StudyEntry[];
-  };
-  profExp: {
-    summary: string;
-    entries: ProfExpEntry[];
-  };
+  entries: ExpEntry[];
 };

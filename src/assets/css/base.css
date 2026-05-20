@@ -26,9 +26,12 @@ body {
 
 img:not(.pp, .no-border) {
   border-radius: 4px;
+  max-width: 100%;
+}
+
+.anim-border {
   border: solid rgb(255, 255, 255, .10);
   animation: borderColor 5s infinite;
-  max-width: 100%;
 }
 
 .purple-bg {
