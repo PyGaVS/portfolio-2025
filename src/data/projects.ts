@@ -17,6 +17,10 @@ import workout6 from '../assets/img/projects/workout_app/image6.png';
 import workout8 from '../assets/img/projects/workout_app/image8.png';
 import workout10 from '../assets/img/projects/workout_app/image10.png';
 import workout12 from '../assets/img/projects/workout_app/image12.png';
+import kortexia1 from '../assets/img/projects/kortexia/Screenshot_2026-03-19-15-55-03-961_com.traitunion.kortexia.jpg';
+import kortexia2 from '../assets/img/projects/kortexia/Screenshot_2026-03-23-14-20-30-409_com.traitunion.kortexia.jpg';
+import kortexiaLogin from '../assets/img/projects/kortexia/login.png';
+import pokerogue from '../assets/img/projects/pokerogue/illusion_screenshot.png';
 
 // Helpers pour construire des segments inline de manière compacte
 const t = (value: string): Inline => ({ kind: 'text', value });
@@ -107,7 +111,7 @@ const sections: ProjectSection[] = [
         projects: [
           {
             title: "Sysème d'inscription et de connexion : adonisjs/css",
-            images: [{ source: inscription, width: 500 }],
+            images: [{ source: inscription, width: 500, featured: true }],
             body: [
               { kind: 'p', text: "Système d'inscription et de connexion réalisé sur le framework Adonis lors de mon stage chez Leadcode qui rentre les informations dans une base de données." },
               { kind: 'p', text: "Dans cet exercice j'ai réalisé des validateurs pour que l'utilisateur rentre des informations valides tel qu'un mot de passe d'une longueur comprise entre 8 et 255 caractères." },
@@ -231,9 +235,9 @@ const sections: ProjectSection[] = [
           {
             title: 'Outil de gestion cloud en terminal de commande : react/typescript',
             images: [
-              { source: tuiHomeview, width: 1000, featured: true },
+              { source: tuiHomeview, width: 1000 },
               { source: tui, width: 1000 },
-              { source: tuiSearch, width: 1000 },
+              { source: tuiSearch, width: 1000, featured: true },
             ],
             body: [
               {
@@ -332,6 +336,76 @@ const sections: ProjectSection[] = [
       },
     ],
   },
+  // ─── Chez Timactive
+  {
+    heading: 'Chez Timactive',
+    groups: [
+      {
+        projects: [
+          {
+            title: "Kortexia — Trait d'Union : gestion de collecte de déchets",
+            images: [
+              { source: kortexia1, featured: true },
+              { source: kortexia2 },
+              { source: kortexiaLogin, featured: true },
+            ],
+            body: [
+              {
+                kind: 'p',
+                text: "Kortexia est une solution de gestion de collecte de déchets composée de deux applications complémentaires.",
+              },
+
+              {
+                kind: 'inline',
+                segments: [
+                  strong('Kortexia-Desk'),
+                  t(' (administrateurs, sur ordinateur) — pilote toute l\'activité depuis le bureau :'),
+                ],
+              },
+              {
+                kind: 'ul',
+                items: [
+                  'Gestion des clients et de leurs contrats',
+                  'Organisation des tournées de collecte',
+                  'Planification des interventions',
+                  'Suivi des agents sur le terrain en temps réel',
+                  "Consultation des rapports d'activité",
+                ],
+              },
+
+              {
+                kind: 'inline',
+                segments: [
+                  strong('Kortexia-Mobile'),
+                  t(' (agents, sur mobile) — accompagne les agents pendant leur journée :'),
+                ],
+              },
+              {
+                kind: 'ul',
+                items: [
+                  'Consultation de la feuille de route du jour',
+                  'Validation de chaque collecte effectuée',
+                  "Signalement d'anomalies avec photos (bac inaccessible, déchets non conformes, etc.)",
+                  'Confirmation de fin de tournée',
+                ],
+              },
+
+              {
+                kind: 'p',
+                text: "Les administrateurs planifient et supervisent depuis Kortexia-Desk, les agents exécutent et remontent l'information via Kortexia-Mobile, et les deux applications dialoguent en continu pour fluidifier la collecte.",
+              },
+
+              {
+                kind: 'p',
+                text: "L'application mobile est déployée en interne sur Google Play via une pipeline CI/CD GitLab (build, signature et publication automatisés sur le canal interne testers).",
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
   // ─── Mes contributions
   {
     heading: 'Mes contributions',
@@ -341,7 +415,9 @@ const sections: ProjectSection[] = [
           {
             title: 'Pokérogue : typescript',
             id: 'pokerogue',
-            images: [],
+            images: [
+              { source: pokerogue, width: 1000, featured: true },
+            ],
             body: [
               {
                 kind: 'p-rich',

@@ -56,7 +56,7 @@ const renderBlock = (block: ProjectBlock, key: Key) => {
           key={key}
           src={block.source}
           alt="project pic"
-          className="rounded-lg my-3 w-full max-h-96"
+          className="rounded-lg my-3 w-full max-h-96 object-contain"
         />
       )
     case 'iframe':
@@ -64,7 +64,7 @@ const renderBlock = (block: ProjectBlock, key: Key) => {
         <iframe
           key={key}
           className="ytb-embed rounded-lg my-3"
-          width={`${block.width}px`}
+          width={`${block.width ?? 1000}px`}
           src={block.src}
           title={block.title}
           frameBorder="0"
@@ -111,7 +111,7 @@ function ProjectCard({ project }: { project: ProjectData }) {
                 key={i}
                 src={img.source}
                 alt="project pic"
-                className="rounded-lg max-h-96"
+                className="rounded-lg max-h-96 object-contain"
               />
             ))}
           </div>

@@ -1,6 +1,6 @@
 export type ProjectImage = {
   source: string;
-  width: number;
+  width?: number;
   featured?: boolean;            // affichée dans le slideshow de la Home
 };
 
