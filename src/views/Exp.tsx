@@ -156,7 +156,7 @@ function Exp() {
         <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/30 -translate-x-1/2" />
 
         <div className="space-y-12">
-          {exp.entries.map((entry, i) => {
+          {exp.entries.slice().reverse().map((entry, i) => {
             const isLeft = i % 2 === 0
             return (
               <div key={i} className="relative grid grid-cols-2 gap-12 items-start">
