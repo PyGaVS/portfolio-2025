@@ -12,14 +12,14 @@ interface Props {
 export default function Layout({
   children,
   title,
-  footer = false,
+  footer = true,
 }: PropsWithChildren<Props>) {
   const { t } = useTranslation()
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen w-full">
       <Navbar />
-      <main className={`pt-16 min-h-screen${footer ? ' pb-24' : ''}`}>
+      <main className="flex-1 pt-16">
         {title && (
           <h1
             className={[
@@ -37,7 +37,7 @@ export default function Layout({
       </main>
 
       {footer && (
-        <footer className='fixed inset-x-0 bottom-0 h-18'>
+        <footer className='relative h-18 w-full'>
           <RetroGrid cellSize={80} angle={78} darkLineColor='rgba(255, 255, 255, 1)' lightLineColor='white' />
           <div className="
             flex justify-between items-center h-full px-[4vw] bg-black/50
@@ -61,6 +61,6 @@ export default function Layout({
           </div>
         </footer>
       )}
-    </>
+    </div>
   )
 }

@@ -17,8 +17,8 @@ const exp: ExpData = {
       {
         period: '2019-2022',
         text: 'Bac général Lycée Notre Dame du Roc à la Roche sur Yon',
-        specialties: {
-          title: 'Spécialiés',
+        subtitle: {
+          title: 'Spécialités',
           items: [
             "Numérique et sciences de l'informatique (20/20 au bac)",
             'Mathématique (17/20 au bac)',
@@ -28,6 +28,11 @@ const exp: ExpData = {
       {
         period: '2022-2024',
         text: 'BTS Service Informatique aux Organisations campus Notre Dame du Roc à la Roche sur Yon (acquis).',
+      },
+      {
+        period: '2025-2026',
+        text: "CDA (Concepteur Développeur d'Applications) en alternance — ",
+        link: { label: 'Timactive', href: 'https://www.timactive.com/' },
       },
     ],
   },
@@ -55,7 +60,7 @@ const exp: ExpData = {
       },
       {
         kind: 'simple',
-        period: 'Janvier - Févirer 2024',
+        period: 'Janvier - Février 2024',
         segments: [
           t("Stage de développement et de déploiement d'applications chez "),
           link('Oomade', 'https://www.oomade.com/'),
@@ -69,7 +74,7 @@ const exp: ExpData = {
           "N'ayant pas le permis de conduire à ce moment là, je me suis lancé dans deux contributions de projets sur GitHub (non rémunéré) dont le code est en open-source :",
         contribs: [
           {
-            title: 'Mineral :',
+            subtitle: 'Mineral :',
             prs: [
               {
                 label: 'Remove member from cache when ban #180',
@@ -77,12 +82,12 @@ const exp: ExpData = {
               },
             ],
             description: [
-              link('Mineral', 'https://github.com/pagefaultgames/pokerogue/pull/3273'),
+              link('Mineral', 'https://mineral-foundation.org/'),
               t(' étant un framework en Dart permettant de créer des bots sur Discord.'),
             ],
           },
           {
-            title: 'PokéRogue :',
+            subtitle: 'PokéRogue :',
             prs: [
               {
                 label: '[Move] Add Retaliate double damage condition #1831',
@@ -109,7 +114,7 @@ const exp: ExpData = {
       },
       {
         kind: 'interim',
-        period: "Novembre 2024 - Aujourd'hui",
+        period: 'Novembre 2024 - Août 2025',
         intro: 'Travail en intérim chez :',
         jobs: [
           { link: { label: 'Thomas Brioche', href: 'https://www.thomasbrioche.com/' }, duration: '1 semaine' },
@@ -119,6 +124,15 @@ const exp: ExpData = {
           { link: { label: 'Sucre+', href: 'https://sucre.plus/' }, duration: '1 jour' },
           { link: { label: 'Atelier Marbrerie Bremand', href: 'https://amb-marbrerie.com/' }, duration: '1 mois' },
         ],
+      },
+      {
+        kind: 'simple',
+        period: 'Septembre 2025 - Septembre 2026',
+        segments: [
+          t("Alternance en CDA (Concepteur Développeur d'Applications) chez "),
+          link('Timactive', 'https://www.timactive.com/'),
+        ],
+        duration: 'Durée : 1 an',
       },
     ],
   },

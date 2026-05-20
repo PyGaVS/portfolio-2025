@@ -1,6 +1,10 @@
+import { Link } from 'react-router'
 import Layout from '@/Components/Layout'
 import ProjectSlideshow from '@/Components/ProjectSlideshow'
 import TechRing from '@/Components/TechRing'
+import ExpTimeline from '@/Components/ExpTimeline'
+import approved from '@/assets/img/approved-meme.jpg'
+import StarBorder from '@/Components/StarBorder'
 
 function Home() {
   return (
@@ -10,27 +14,35 @@ function Home() {
         <div className="md:col-span-5 relative min-h-105">
           <TechRing />
         </div>
-      
+
         {/* Projects slideshow */}
         <div className="md:col-span-7 relative min-h-105">
           <ProjectSlideshow />
         </div>
 
         {/* Exp timeline */}
-        <div className="md:col-span-8 border-2 border-dashed border-white/50 rounded-2xl min-h-90 flex items-center justify-center">
-          <p className="text-2xl md:text-3xl font-bold text-white/70">
-            EXP TIMELINE <span className="text-base font-normal">(col-span-8)</span>
-          </p>
+        <div className="md:col-span-8 relative min-h-60">
+          <ExpTimeline />
         </div>
 
         {/* CTA Knuckles */}
-        <div className="md:col-span-4 border-2 border-dashed border-white/50 rounded-2xl min-h-90 flex items-center justify-center">
-          <p className="text-2xl md:text-3xl font-bold text-white/70 text-center px-4">
-            CTA KNUCKLES <span className="text-base font-normal block">(col-span-4)</span>
+        <div className="md:col-span-4 glassy min-h-60 flex flex-col items-center justify-center gap-4 p-6 text-center">
+          <img
+            src={approved}
+            alt="Knuckles approuvé"
+            className="w-44 max-w-full rounded-lg no-border"
+          />
+          <p className="text-xl md:text-2xl font-bold glow-text">
+            Travaillons ensemble
           </p>
+          <StarBorder
+            as={Link}
+            to="contact"
+            className="no-underline hover:text-shadow-glow transition-all duration-300"
+          >
+            Me contacter →
+          </StarBorder>
         </div>
-
-        
       </div>
     </Layout>
   )

@@ -7,7 +7,8 @@ export type Link = { label: string; href: string; style?: 'blue' | 'white' };
 export type StudyEntry = {
   period: string;
   text: string;
-  specialties?: {
+  link?: Link;            // lien optionnel rendu inline à la fin du text
+  subtitle?: {
     title: string;
     items: string[];
   };
@@ -21,7 +22,7 @@ export type SimpleProfEntry = {
 };
 
 export type Contribution = {
-  title: string;
+  subtitle: string;
   prs: Link[];
   description?: Inline[];
   detailsLink?: Link;

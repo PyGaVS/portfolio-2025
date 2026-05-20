@@ -49,6 +49,21 @@
      Utilisable via la classe .glow-text (permanent) ou via les utilitaires
      Tailwind générés (text-shadow-glow, hover:text-shadow-glow, etc.). */
   --text-shadow-glow: 0 0 8px rgb(255 255 255 / 0.6), 0 0 16px rgb(255 255 255 / 0.3);
+
+  /* Animations StarBorder (composant ReactBits) — la durée est fournie inline
+     via style={{ animationDuration: speed }}, ici on déclare juste le mouvement. */
+  --animate-star-movement-bottom: star-movement-bottom linear infinite alternate;
+  --animate-star-movement-top: star-movement-top linear infinite alternate;
+
+  @keyframes star-movement-bottom {
+    0%   { transform: translate(0%, 0%);    opacity: 1; }
+    100% { transform: translate(-100%, 0%); opacity: 0; }
+  }
+
+  @keyframes star-movement-top {
+    0%   { transform: translate(0%, 0%);   opacity: 1; }
+    100% { transform: translate(100%, 0%); opacity: 0; }
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -70,7 +85,6 @@
   /* SCROLLBAR ─────────────────────────────────────────────────────────────── */
   body::-webkit-scrollbar {
     width: 10px;
-    height: 10px;
   }
 
   body::-webkit-scrollbar-track {
@@ -78,7 +92,7 @@
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: white;
+    background-color: rgba(255 255 255);
     border-radius: 20px;
     border: solid 3px var(--gray-3);
   }

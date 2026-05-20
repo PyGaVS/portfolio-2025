@@ -48,7 +48,7 @@ const renderProfEntry = (entry: ProfExpEntry, i: number) => {
           {entry.contribs.map((c, ci) => (
             <Fragment key={ci}>
               {ci > 0 && <br />}
-              <p><strong>{c.title} </strong></p>
+              <p><strong>{c.subtitle} </strong></p>
               {c.prs.map((pr, pi) => (
                 <p key={pi}>{renderLink(pr)}</p>
               ))}
@@ -79,17 +79,20 @@ const renderProfEntry = (entry: ProfExpEntry, i: number) => {
 function Exp() {
   return (
     <Layout title={exp.header}>
-      <details>
+      <details className='m-4'>
         <summary>{exp.studies.summary}</summary>
-        <div className="paragraph">
+        <div className="glassy-dark p-4 m-4">
           {exp.studies.entries.map((entry, i) => (
             <Fragment key={i}>
               <h2><strong>{entry.period}</strong></h2>
-              <p className="gray">{entry.text}</p>
-              {entry.specialties && (
+              <p className="gray">
+                {entry.text}
+                {entry.link && renderLink(entry.link)}
+              </p>
+              {entry.subtitle && (
                 <>
-                  <strong>{entry.specialties.title} : </strong>
-                  {entry.specialties.items.map((item, ii) => (
+                  <strong>{entry.subtitle.title} : </strong>
+                  {entry.subtitle.items.map((item, ii) => (
                     <p key={ii} className="gray">{item}</p>
                   ))}
                 </>
@@ -99,9 +102,9 @@ function Exp() {
         </div>
       </details>
 
-      <details>
+      <details className='m-4'>
         <summary>{exp.profExp.summary}</summary>
-        <div className="paragraph">
+        <div className="glassy-dark p-4 m-4">
           {exp.profExp.entries.map(renderProfEntry)}
         </div>
       </details>
