@@ -2,12 +2,19 @@
   --bg-zoom: 180%;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --bg-zoom: 400%;
+  }
+}
+
 html {
   background-color: #090a0f;
   background-image: var(--bg-image, url('./../img/void.jpg'));
   background-size: var(--bg-zoom);
   background-position: 50% 50%;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   scroll-behavior: smooth;
 }
 

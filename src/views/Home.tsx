@@ -9,19 +9,19 @@ import StarBorder from '@/Components/StarBorder'
 function Home() {
   return (
     <Layout footer>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 md:p-6 max-w-5/6 max-w-9xl mx-auto">
-        {/* Tech carousel */}
-        <div className="md:col-span-5 relative min-h-105">
+      <div className="grid grid-cols-1 md:grid-cols-10 xl:grid-cols-12 gap-4 p-4 md:p-6 max-w-5/6 max-w-9xl mx-auto">
+        {/* Tech ring */}
+        <div className="md:col-span-6 xl:col-span-5 relative min-h-105">
           <TechRing />
         </div>
 
         {/* Projects slideshow */}
-        <div className="md:col-span-7 relative min-h-105">
+        <div className="md:col-span-4 xl:col-span-7 relative min-h-105">
           <ProjectSlideshow />
         </div>
 
         {/* Exp timeline */}
-        <div className="md:col-span-8 relative min-h-60">
+        <div className="md:col-span-6 xl:col-span-8 relative min-h-60 mb-10">
           <ExpTimeline />
         </div>
 

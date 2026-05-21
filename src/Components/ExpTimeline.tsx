@@ -25,20 +25,17 @@ const itemVariants = {
 
 export default function ExpTimeline() {
   return (
-    <div className="absolute inset-0 p-4 md:p-6 flex flex-col">
-      <div className="flex-1 flex items-center glassy p-4 md:p-6">
-        <div className="w-full relative">
-          {/* Ligne horizontale */}
+    <div className="p-4 md:p-6 flex flex-col h-full">
+      <div className="flex-1 flex items-center glassy p-4 md:p-6 overflow-x-auto md:overflow-visible">
+        <div className="w-full min-w-max md:min-w-0 relative">
           <motion.div
-            className="absolute left-0 right-0 top-1/2 h-px bg-white/30 origin-left"
+            className="absolute left-0 right-0 top-1/2 h-px bg-white/30 origin-left pointer-events-none"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
           />
-
-          {/* Grid */}
           <motion.div
-            className="relative grid grid-flow-col auto-cols-fr"
+            className="relative grid grid-flow-col auto-cols-[minmax(120px,1fr)]"
             initial="hidden"
             animate="visible"
             variants={{
