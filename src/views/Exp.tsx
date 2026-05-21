@@ -151,27 +151,32 @@ const renderCard = (entry: ExpEntry) => {
 function Exp() {
   return (
     <Layout title={exp.header}>
-      <div className="max-w-5xl mx-auto px-4 py-8 relative">
-        {/* Ligne */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/30 -translate-x-1/2" />
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <div className="space-y-12 relative">
+          <div className="absolute top-0 bottom-0 w-px bg-white/30 left-6 md:left-1/2 -translate-x-1/2" />
 
-        <div className="space-y-12">
           {exp.entries.slice().reverse().map((entry, i) => {
             const isLeft = i % 2 === 0
             return (
-              <div key={i} className="relative grid grid-cols-2 gap-12 items-start">
-                {/* Sparkle */}
+              <div
+                key={i}
+                className="relative grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-12 items-start"
+              >
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="absolute left-1/2 top-6 -translate-x-1/2 w-5 h-5 text-white z-10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                  className="absolute top-6 w-5 h-5 text-white z-10 drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] left-6 md:left-1/2 -translate-x-1/2"
                 >
                   <path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" />
                 </svg>
 
-                {/* Carte */}
-                <div className={isLeft ? 'md:pr-8 pr-2 flex' : 'col-start-2 md:pl-8 pl-2 flex'}>
+                <div
+                  className={
+                    'flex pl-16 md:pl-0 ' +
+                    (isLeft ? 'md:pr-8 md:justify-end' : 'md:col-start-2 md:pl-8')
+                  }
+                >
                   <div className="glassy p-5 max-w-md w-full">
                     {entry.media && (
                       <img
