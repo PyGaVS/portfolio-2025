@@ -1,5 +1,5 @@
 import esport from '../assets/img/hobbies/esport.jpg';
-import pullUp from '../assets/img/hobbies/pull_up.jpg';
+import hspu from '../assets/img/hobbies/hspu.jpg';
 import code from '../assets/img/hobbies/code.jpg';
 import Hobbie from '../Components/Hobbie';
 import Layout from '@/Components/Layout';
@@ -16,7 +16,7 @@ function Hobbies() {
         <p className='bubble yellow-bg'>sociabilisation</p>
         <p className='bubble purple-bg'>réflexion</p>
       </Hobbie>
-      <Hobbie img={pullUp} title='Musculation / Callisthénie'>
+      <Hobbie img={hspu} title='Musculation / Callisthénie'>
         <p className='bubble orange-bg'>goût de l'effort</p>
         <p className='bubble blue-bg'>forme physique</p>
         <p className='bubble orange-bg'>rigueur</p>

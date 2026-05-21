@@ -291,7 +291,6 @@ textarea:focus~span{
 .glassy {
   background-color: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-radius: 1rem;
   border: solid 1px rgba(255, 255, 255, 0.1);
   box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.1);
@@ -300,7 +299,6 @@ textarea:focus~span{
 .glassy-dark {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border-radius: 1rem;
   border: solid 1px rgba(255, 255, 255, 0.1);
   box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.1);
